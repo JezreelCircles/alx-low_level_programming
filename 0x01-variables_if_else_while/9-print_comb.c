@@ -10,14 +10,16 @@
 int main(void)
 {
 int d;
-char lowercase;
 
 for (d = '0'; d <= '9'; d++)
+{
 putchar(d);
-
-for (lowercase = 'a'; lowercase <= 'f'; lowercase++)
-putchar(lowercase);
+if (d != '9')
+{
+putchar(',');
+putchar(',');
+}
+}
 putchar('\n');
-
 return (0);
 }
