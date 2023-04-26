@@ -1,18 +1,21 @@
 #include "main.h"
 #include <unistd.h>
+
 /**
- * print alphabet - Entry point
- * Return: Always 0 upon success
+ * print_alphabet - Entry point
+ * Return:0
  */
+
 void print_alphabet(void)
 {
-	char c;
+	char c = 'a';
 
-	for (c = 'a'; c <= 'z'; c++)
-
-{
+	while (c <= 'z')
+	{
 		_putchar(c);
+		c++;
+
 	}
 	_putchar('\n');
-	return (0);
+
 }
