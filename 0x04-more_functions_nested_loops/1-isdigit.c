@@ -2,8 +2,10 @@
 #include <stdio.h>
 
 /**
- * _isadigit - checks for a digit (0 through 9).
- * @c: the character to be checked
+ * _isadigit - Checks for a digit
+ *
+ * @c: The character to be checked
+ *
  * Return: 1 for digit character or 0 for anything else
  */
 
