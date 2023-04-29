@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isadigit - Checks for a digit
+ * _isdigit - Checks for a digit
  *
  * @c: The character to be checked
  *
