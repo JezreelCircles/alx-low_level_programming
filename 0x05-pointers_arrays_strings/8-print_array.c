@@ -25,6 +25,6 @@ if (index_of_array == (n - 1))
 printf("%d", a[n - 1]);
 }
 
-putchar('\n');
+printf('\n');
 
 }
