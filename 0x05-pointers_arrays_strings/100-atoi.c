@@ -1,11 +1,9 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * _atoi - convert a string to an integer.
- * @s: the pointer to convert
- *
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
  * Return: A integer
  */
 
@@ -19,7 +17,7 @@ int isi = 0;
 
 while (s[h])
 {
-if (s[h])
+if (s[h] == 45)
 {
 min *= -1;
 }
