@@ -4,7 +4,7 @@
 /**
  * _strlen_recursion - returns the length of a string
  * @s: string
- * return: length of a string
+ * return: the length of the string
  *
  */
 int _strlen_recursion(char *s)
@@ -20,8 +20,8 @@ int _strlen_recursion(char *s)
  * comparator - comcompares each character of the string
  * @s: string
  * @n1: smallest iterator
- * @n: biggest iterator
- * return: .
+ * @n2: biggest iterator
+ * return: 1 if s is a palindrome, 0 otherwise
  */
 
 int comparator(char *s, int n1, int n2)
@@ -38,7 +38,7 @@ int comparator(char *s, int n1, int n2)
 /**
  * is_palindrome - detects if a string is a palindrome
  * @s: string
- * return: 1 if s is a palindrome, 0 if it is not
+ * return: 1 if s is a palindrome, 0 otherwise
  *
  */
 
