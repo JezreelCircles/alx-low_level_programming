@@ -26,7 +26,6 @@ int is_prime_number(int n)
  * @n: number to check
  * @i: iteration time
  * Return: 1 if is prime or 0 if composite
- * 
  *
  */
 
