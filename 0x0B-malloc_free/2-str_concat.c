@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -12,44 +11,41 @@
 char *str_concat(char *s1, char *s2)
 
 {
+	char *conct;
 
-char *conct;
+	int l, c;
 
-int k;
-int ci;
+	if (s1 == NULL)
 
-if (s1 == NULL)
-s1 = "";
+	s1 = "";
 
-if (s2 == NULL)
-{
-s2 = "";
-k = ci = 0;
-}
+	if (s2 == NULL)
 
-while (s1[k] != '\0')
-k++;
+	s2 = "";
+	l = c = 0;
 
-while (s2[ci] != '\0')
-ci++;
+	while (s1[l] != '\0')
+	l++;
 
-conct = malloc(sizeof(char) * (k + ci + 1));
+	while (s2[c] != '\0')
+	c++;
+	conct = malloc(sizeof(char) * (l + c + 1));
 
-if (conct == NULL)
-return (NULL);
+	if (conct == NULL)
+	return (NULL);
 
-k = ci = 0;
+	l = c = 0;
+	while (s1[l] != '\0')
+	{
+		conct[l] = s1[l];
+		l++;
+	}
 
-while (s1[k] != '\0')
-{
-conct[k] = s1[k];
-k++;
-}
-while (s2[ci] != '\0')
-{
-conct[k] = s2[ci];
-k++, ci++;
-}
-conct[k] = '\0';
-return (conct);
+	while (s2[c] != '\0')
+	{
+		conct[l] = s2[c];
+		l++, c++;
+	}
+	conct[l] = '\0';
+	return (conct);
 }
