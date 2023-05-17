@@ -3,52 +3,51 @@
 #include "main.h"
 
 /**
- * argstostr - function that concatenates all the arguments of your program.
- *
+ * argstostr - function to convert parameters passed to the program to string.
  * @ac: int input
  * @av: double pointer array
- * Return: 0
+ * Return: a pointer to a new string.
  */
 
 char *argstostr(int ac, char **av)
-
 {
-	int I, N, K = 0, M = 0;
+int I = 0, N = 0, KK = 0, M = 0;
 
-	char *str;
+char *s;
 
-	if (ac == 0 || av == NULL)
-	return (NULL);
+if (ac == 0 || av == NULL)
+return (NULL);
 
-	for (I = 0; I < ac; I++)
+while (I < ac)
+{
+while (av[I][N])
+{
+	KK++;
+	N++;
+}
+N = 0;
+I++;
+}
 
+s = malloc((sizeof(char) * KK) + ac + 1);
+
+I = 0;
+while (av[I])
+{
+	while (av[I][N])
 	{
-	for (N = 0; av[I][N]; N++)
+		s[M] = av[I][N];
+		M++;
+		N++;
+	}
+	s[M] = '\n';
 
+	N = 0;
 	M++;
-	}
+	I++;
+}
 
-	M += ac;
-	str = malloc(sizeof(char) * M + 1);
-
-	if (str == NULL)
-	return (NULL);
-
-	for (I = 0; I < ac; I++)
-
-	{
-	for (N = 0; av[I][N]; N++)
-	{
-		str[K] = av[I][N];
-		K++;
-	}
-
-	if (str[K] == '\0')
-	{
-		str[K++] = '\n';
-	}
-
-	}
-	return (str);
-
+M++;
+s[M] = '\0';
+return (s);
 }
