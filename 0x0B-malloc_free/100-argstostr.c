@@ -18,7 +18,7 @@ char *s;
 if (ac == 0 || av == NULL)
 return (NULL);
 
-while (I < ac)
+while (I = 0, I < ac)
 {
 while (av[I][N])
 {
@@ -28,7 +28,6 @@ while (av[I][N])
 N = 0;
 I++;
 }
-
 s = malloc((sizeof(char) * KK) + ac + 1);
 
 I = 0;
