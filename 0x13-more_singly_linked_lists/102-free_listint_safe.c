@@ -12,7 +12,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 
-size_t l = 0;
+size_t len = 0;
 int d;
 listint_t *temp;
 
@@ -27,14 +27,14 @@ if (d > 0)
 temp = (*h)->next;
 free(*h);
 *h = temp;
-l++;
+len++;
 }
 
 else
 {
 free(*h);
 *h = NULL;
-l++;
+len++;
 
 break;
 }
@@ -42,5 +42,5 @@ break;
 
 *h = NULL;
 
-return (l);
+return (len);
 }
