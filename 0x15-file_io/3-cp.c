@@ -3,20 +3,20 @@
 
 /**
  * error_file - checks if files can be opened.
- * @file_from: file_from.
- * @file_to: file_to.
+ * @old_from: file to copy from.
+ * @new_file: file to copy to.
  * @argv: arguments vector.
  * Return: nothing.
  */
 
-void error_file(int file_from, int file_to, char *argv[])
+void error_file(int old_file, int new_file, char *argv[])
 {
-	if (file_from == -1)
+	if (old_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (file_to == -1)
+	if (new_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);

@@ -7,7 +7,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
+void error_file(int old_file, int new_file, char *argv[]);
+int main(int argc, char *argv[]);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 int _putchar(char c);
