@@ -1,11 +1,14 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 
 /**
  * main - check the code
- *
+ * @ac: argument
+ * @av: argument
  * Return: Always 0.
  */
+
 int main(int ac, char **av)
 {
 ssize_t n;
