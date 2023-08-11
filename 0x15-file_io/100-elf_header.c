@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
