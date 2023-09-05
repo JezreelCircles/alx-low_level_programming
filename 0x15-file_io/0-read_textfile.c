@@ -1,4 +1,6 @@
-#include "main.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
 
