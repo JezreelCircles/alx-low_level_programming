@@ -1,6 +1,8 @@
-#include "main.h"
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
 
 /**
  * error_file - checks if files can be opened
@@ -25,7 +27,7 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - check the code for Holberton School students.
+ * main - check code for peers
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
@@ -33,7 +35,7 @@ void error_file(int file_from, int file_to, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, err_close;
+	int file_from, file_to, ErrClose;
 	ssize_t nchars, nwr;
 	char buf[1024];
 
@@ -58,15 +60,15 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 
-	err_close = close(file_from);
-	if (err_close == -1)
+	ErrClose = close(file_from);
+	if (ErrClose == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
-	err_close = close(file_to);
-	if (err_close == -1)
+	ErrClose = close(file_to);
+	if (ErrClose == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
