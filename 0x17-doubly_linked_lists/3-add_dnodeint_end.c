@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 #include <stdio.h>
 
@@ -8,9 +10,10 @@
  * @n: element
  * Return: new element address or NULL
  */
+
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *HeaD;
+	dlistint_t *Head;
 	dlistint_t neww;
 
 	neww = malloc(sizeof(dlistint_t));
@@ -20,18 +23,18 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	neww->n = n;
 	neww->next = NULL;
 
-	HeaD = *head;
+	Head = *head;
 
-	if (HeaD != NULL)
+	if (Head != NULL)
 	{
-		while (HeaD->next != NULL)
-			HeaD = HeaD->next;
-		HeaD->next = neww;
+		while (Head->next != NULL)
+			Head = Head->next;
+		Head->next = neww;
 	}
 	else
 	{
 		*head = neww;
 	}
-	neww->prev = HeaD;
+	neww->prev = Head;
 	return (neww);
 }
