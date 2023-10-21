@@ -23,6 +23,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		Head = *h;
 		m = 1;
 		if (Head != NULL)
+		{
 			while (Head->prev != NULL)
 				Head = Head->prev;
 		while (Head != NULL)
@@ -47,6 +48,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		m++;
 	}
 	}
-}
 return (New);
 }
